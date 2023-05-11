@@ -7,11 +7,12 @@ import Index from "./Index";
 import HeaderBar from "./componentes/Header";
 import FooterComp from "./componentes/Footer";
 import Equipo from "./Equipo";
+import Proyecto from "./Proyecto";
 
 const links = [
   { link: "./", label: "Inicio", links: [] },
   { link: "./about", label: "Nosotros", links: [] },
-  { link: "./about", label: "Proyectos", links: [] },
+  { link: "/proyecto", label: "Proyectos", links: [] },
   { link: "/equipo", label: "Equipo", links: [] },
 ];
 const linksFooter = [
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
     path: "equipo",
     element: <Equipo />,
   },
+  {
+    path: "proyecto",
+    element : <Proyecto />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
